@@ -21,25 +21,22 @@ function renderizarHistorial() {
         // tarjeta.style.marginBottom = "25px";
 
         tarjeta.innerHTML = `
-            <div class="juntos" style="display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap;">
+            <div class="juntos">
                 <div>
-                    <h2 class="letras-op2" style="margin: 0;">Cita el día ${cita.fecha || 'Sin fecha'}</h2>
-                    ${cita.estado === 'cancelada' ? '<p style="color: red; font-weight: bold; margin: 5px 0 0 0;">Cancelada</p>' : ''}
+                    <h2 class="letras-op2">Cita el día ${cita.fecha || 'Sin fecha'}</h2>
+                    ${cita.estado === 'cancelada' ? '<p style="color: #d32f2f; font-weight: bold; margin: 4px 0 0 0;">Cancelada</p>' : ''}
                 </div>
-                
-                <span style="font-size: 0.95rem; color: #555;">
-                    (La cita se puede modificar hasta las ${horaLimiteFormateada})
-                </span>
+        
+            <span style="font-size: 0.9rem; color: #555;">
+                (Se puede modificar hasta las ${horaLimiteFormateada})
+            </span>
 
-                <div>
-                    <button class="empuja-derecha" type="button" onclick="intentarReagendar(${index})">Reagendar</button>
-                    <button class="empuja-izquierda" type="button" onclick="intentarCancelar(${index})" style="color: red;">Cancelar</button>
-                </div>
+            <div class="acciones-cita">
+                <button class="btn-reagendar" type="button" onclick="intentarReagendar(${index})">Reagendar</button>
+                <button class="btn-cancelar" type="button" onclick="intentarCancelar(${index})">Cancelar</button>
             </div>
 
-            <div id="seccion-reprogramar-${index}" style="margin-top: 10px;"></div>
-
-            <p class="linea-hist"></p>
+            <div id="seccion-reprogramar-${index}"></div>
         `;
 
         contenedor.appendChild(tarjeta);
