@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
         citas.forEach(cita => {
             const nuevoDiv = document.createElement("div");
             nuevoDiv.innerHTML = `
-                <div class="marco-op" style="margin-bottom: 20px;">
+                <div class="marco-op">
                     <p><strong>Médico:</strong> ${cita.medico}</p>
                     <p><strong>Fecha:</strong> ${cita.fecha}</p>
                     <p><strong>Hora:</strong> ${cita.hora}</p>
