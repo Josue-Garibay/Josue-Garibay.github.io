@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="centrar">
+    <h1 class="centrar letras-titulo" >AGENDAR CITA</h1>
+    <p class="linea-hist"></p>
+    <div class="Contorno"></div>
+    <h2>Medicos disponibles</h2> 
+    <div id="contenedor">
+        <div class="marco-op">
+            <h3 class="letras-op">Daniel Tapia</h3>
+            <img src="https://png.pngtree.com/png-vector/20230928/ourlarge/pngtree-young-afro-professional-doctor-png-image_10148632.png" 
+            width="170" height="180" alt="Dr. Tapia">
+            <h3 class="letras-op">Pediatria</h3>
+        </div>
+
+        <div class="marco-op">
+            <h3 class="letras-op">Sergio Castro</h3>
+            <img src="https://thumbs.dreamstime.com/b/doctor-joven-sonriente-6008386.jpg?w=576" 
+            width="130" height="180" alt="Dr. Castro">
+            <h3 class="letras-op">Dermatologia</h3>
+        </div>
+
+        <div class="marco-op">
+            <h3 class="letras-op">Gregorio Casas</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/HouseGregoryHouse.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled" alt="Dr. House" width="170" height="180">
+            <h3 class="letras-op">Diagnostico Medico</h3>
+        </div>
+
+        <div class="marco-op">
+            <h3 class="letras-op">Meredith Grey</h3>
+            <img src="https://m.media-amazon.com/images/M/MV5BMTU3MTYwMjEwNV5BMl5BanBnXkFtZTcwNTgyNzMwMg@@._V1_QL75_UX180_CR0,2,180,266_.jpg" alt="Dr. Grey" width="130" height="180">
+            <h3 class="letras-op">Cuidados Paliativos</h3>
+        </div>
+    </div>
+
+    <form id="form-cita" class="formulario-cita">
+        <label style="margin-bottom: 10px; font-size: 1.15rem; font-weight: bold;" class="elegir-doctor" for="medico">Elige tu medico: </label>
+            <select id="medico" name="medico">
+            <option value="Daniel Tapia">Daniel Tapia</option>
+            <option value="Sergio Castro">Sergio Castro</option>
+            <option value="Gregorio Casas">Gregorio Casas</option>
+            <option value="Meredith Grey">Meredith Grey</option>
+        </select>
+
+        <label class="elegir-doctor" for="fecha-cita" style="margin-bottom: 10px; font-size: 1.15rem; font-weight: bold;">Elige la fecha de tu cita:</label>
+        <input type="date" id="fecha-cita" name="fecha-cita" class="input-fecha" required>
+
+        <h3>Elige la hora de tu cita:</h3>
+        <input type="time" name="hora-cita" id="hora-cita" required>
+
+        <h3 style="margin:center">Escribe el motivo de tu consulta:</h3>
+        <textarea id="motivo" class="textarea"></textarea>
+
+        <button type="submit" style="margin-top: 30px; margin-bottom: 30px;" >AGENDAR CITA</button>
+    </form>
+
+    <script src = "../js/agendar.js"></script>
+
+</body>
+</html>
